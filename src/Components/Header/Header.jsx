@@ -21,10 +21,10 @@ const Header = () => {
           <ul>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
-            <li><Link to='/service'>Service</Link></li>
-            {login && <li><Link to='/profiles'>Users</Link></li>}
+            <li><Link to='/service'>Find Your Match</Link></li>
+            {/* {login && <li><Link to='/profiles'>Users</Link></li>} */}
             <li><Link to='/success'>Success Story</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
+            <li><Link to='/contact'>Contact Us</Link></li>
           </ul>
         </div>
         <div className="login">

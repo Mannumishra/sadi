@@ -22,8 +22,8 @@ const SelfProfile = () => {
 
   useEffect(() => {
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
     })
     getApiData()
   }, [])
@@ -32,7 +32,7 @@ const SelfProfile = () => {
       <section>
         <div className="selfprofile">
           <div className="selfprofilefirst">
-            <img src={data.image} alt="" style={{ height: 300 }} />
+            <img src={data.image} alt={data.name} style={{ height: 400 ,width:"100%" ,objectFit:"cover" }} />
           </div>
           <div className="selprofilesecond">
             <table className="table table-bordered table-striped table-hover">
@@ -62,21 +62,18 @@ const SelfProfile = () => {
                   <td>{data.phone}</td>
                 </tr>
                 <tr>
-                  <th>Name</th>
-                  <td>{data.name}</td>
+                  <td><Link to={`/update-profile/${data._id}`} className="profilebutton">Update</Link></td>
+                  <td><Link to={`/details/${data._id}`} className="profilebutton">View Profile</Link></td>
                 </tr>
                 <tr>
-                  <td ><Link to={`/update-profile/${data._id}`} className='profilebutton'>Update</Link></td>
-                  <td ><Link to={`/details/${data._id}`} className='profilebutton'>View Profile</Link></td>
-                </tr>
-                <tr>
-                  <td colSpan={2}><Link onClick={logout} className='profilebutton'>Logout</Link></td>
+                  <td colSpan={2}><Link onClick={logout} className="profilebutton">Logout</Link></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
+
     </>
   )
 }

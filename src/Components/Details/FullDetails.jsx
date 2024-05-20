@@ -20,41 +20,127 @@ const FullDetails = () => {
     useEffect(() => {
         getApiData();
         window.scrollTo({
-            top:0,
-            behavior:"smooth"
-          })
+            top: 0,
+            behavior: "smooth"
+        })
     }, []);
 
     return (
         <div className="full-details-container">
-            <h2>Full Details</h2>
-            <div className="details-card">
-
-                <div className="details-content">
-                    <p><strong>Name:</strong> {data.name}</p>
-                    <p><strong>Age:</strong> {data.age}</p>
-                    <p><strong>Birthplace:</strong> {data.birthplace}</p>
-                    <p><strong>Date of Birth:</strong> {data.dateofbirth}</p>
-                    <p><strong>Gender:</strong> {data.gender}</p>
-                    <p><strong>Education:</strong> {data.education}</p>
-                    <p><strong>Email:</strong> {data.email}</p>
-                    <p><strong>Phone:</strong> {data.phone}</p>
-                    <p><strong>Address:</strong> {data.address}, {data.city}, {data.state} - {data.pin}</p>
-                    <p><strong>Religion:</strong> {data.religion}</p>
-                    <p><strong>Cast:</strong> {data.cast}</p>
-                    <p><strong>Subcast:</strong> {data.subcast}</p>
-                    <p><strong>Gotra:</strong> {data.gotra}</p>
-                    <p><strong>Mother's Gotra:</strong> {data.mgotra}</p>
-                    <p><strong>Father's Gotra:</strong> {data.ggotra}</p>
-                    <p><strong>Height:</strong> {data.height}</p>
-                    <p><strong>Father's Name:</strong> {data.fathername}</p>
-                    <p><strong>Mother's Name:</strong> {data.mothername}</p>
-                    <p><strong>Siblings:</strong> {data.siblings}</p>
-                </div>
-                <a href={data.image} target="_blank" rel="noopener noreferrer">
-                    <img src={data.image} alt={data.name} className="profile-image" />
-                </a>
+            <h2 className='text-center'>Full Informations</h2>
+            <div className="table-container">
+                <table className='table table-bordered table-striped table-hover'>
+                    <tbody>
+                        <tr>
+                            <th colSpan={3} style={{ color: "orange" }}>PERSONAL INFORMATION</th>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td>{data.name}</td>
+                            <td rowSpan={9}>
+                                <a href={data.image} target="_blank" rel="noopener noreferrer">
+                                    <img src={data.image} alt={data.name} className="profile-image" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Father Name</th>
+                            <td>{data.fathername}</td>
+                        </tr>
+                        <tr>
+                            <th>Mother Name</th>
+                            <td>{data.mothername}</td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td>{data.gender}</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>{data.age}</td>
+                        </tr>
+                        <tr>
+                            <th>Date Of Birth</th>
+                            <td>{data.dateofbirth}</td>
+                        </tr>
+                        <tr>
+                            <th>Birth Place</th>
+                            <td>{data.birthplace}</td>
+                        </tr>
+                        <tr>
+                            <th>Height</th>
+                            <td>{data.height}</td>
+                        </tr>
+                        <tr>
+                            <th>Siblings</th>
+                            <td>{data.siblings}</td>
+                        </tr>
+                        <tr>
+                            <th colSpan={3} style={{ color: "orange" }}>CONTACT DETAILS</th>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{data.email}</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td>{data.phone}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
+            <div className="table-container">
+                <table className='table table-bordered table-striped table-hover'>
+                    <tbody>
+                        <tr>
+                            <th colSpan={6} style={{ color: "orange" }}>Religious & Social Background</th>
+                        </tr>
+                        <tr>
+                            <th>Religion</th>
+                            <td>{data.religion}</td>
+                            <th>Cast</th>
+                            <td>{data.cast}</td>
+                            <th>Sub Cast</th>
+                            <td>{data.subcast}</td>
+                        </tr>
+                        <tr>
+                            <th colSpan={6} style={{ color: "orange" }}>Gotra Information</th>
+                        </tr>
+                        <tr>
+                            <th>Self Gotra</th>
+                            <td>{data.gotra}</td>
+                            <th>Mother gotra</th>
+                            <td>{data.mgotra}</td>
+                            <th>Grand Mother Gotra</th>
+                            <td>{data.ggotra}</td>
+                        </tr>
+                        <tr>
+                            <th colSpan={6} style={{ color: "orange" }}>Education Information</th>
+                        </tr>
+                        <tr>
+                            <th>Highest Education</th>
+                            <td>{data.education}</td>
+                        </tr>
+                        <tr>
+                            <th colSpan={6} style={{ color: "orange" }}>Location / Residence</th>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <td>{data.address}</td>
+                        </tr>
+                        <tr>
+                            <th>Pin</th>
+                            <td>{data.pin}</td>
+                            <th>City</th>
+                            <td>{data.city}</td>
+                            <th>State</th>
+                            <td>{data.state}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     );
 }

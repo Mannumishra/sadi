@@ -17,6 +17,10 @@ const UserProfile = () => {
     const filterData = data.filter((x) => x.gender !== gender)
     console.log(filterData)
     useEffect(() => {
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+          })
         getApiData()
     }, [])
     return (

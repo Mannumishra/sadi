@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Signup.css"
 import axios from 'axios'
 import toast from 'react-hot-toast'
@@ -7,7 +7,7 @@ const Signup = () => {
     name: "",
     fathername: "",
     mothername: "",
-    age:"",
+    age: "",
     gender: "",
     dateofbirth: "",
     birthplace: "",
@@ -77,12 +77,18 @@ const Signup = () => {
       console.log(res)
       if (res.status === 200) {
         toast.success("Signup Success Fully")
-        window.location.href="/login"
+        window.location.href = "/login"
       }
     } catch (error) {
       // console.log(error)
     }
   }
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }, [])
   return (
     <>
       <p className='signupheading'>Create New Account</p>

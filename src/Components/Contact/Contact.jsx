@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Contactr.css"
 const Contact = () => {
+  useEffect(()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  },[])
   return (
     <>
       <div className='contactusheading'>

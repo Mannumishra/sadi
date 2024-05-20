@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutimage from '../Images/bridaltech.webp'
 import "./About.css"
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }, [])
   return (
     <>
       <div className="about">

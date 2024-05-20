@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -35,6 +35,12 @@ const Login = () => {
             toast.error("Invaild username or password")
         }
     }
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
     return (
         <>
             <div className="logincomponent">

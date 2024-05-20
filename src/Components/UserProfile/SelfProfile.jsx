@@ -21,6 +21,10 @@ const SelfProfile = () => {
   }
 
   useEffect(() => {
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
     getApiData()
   }, [])
   return (

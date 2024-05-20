@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Success.css'
 import cupple1 from '../Images/cupple1.jpg'
 import cupple2 from '../Images/cupple4.jpg'
 import cupple3 from '../Images/cupple3.jpg'
 import cupple4 from '../Images/cupple4.jpg'
 const SuccessStory = () => {
+  useEffect(()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  },[])
   return (
     <>
     <div className="successmain">

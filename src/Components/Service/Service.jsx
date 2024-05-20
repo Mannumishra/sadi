@@ -31,7 +31,7 @@ const Service = () => {
     <>
       <div className="servicemain">
         <div className="ourservice">
-          <p>Him And Her</p>
+          <p>Find Your Match</p>
         </div>
         <div className="servicecard">
           {

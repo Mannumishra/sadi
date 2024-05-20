@@ -4,8 +4,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Service = () => {
-  let login = sessionStorage.getItem("login");
-  let gender = sessionStorage.getItem("gender");
+  let login = sessionStorage.getItem("login")
+  let gender = sessionStorage.getItem("gender")
 
   const [data, setData] = useState([]);
   const getApiData = async () => {

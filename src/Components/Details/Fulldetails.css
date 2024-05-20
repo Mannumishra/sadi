@@ -6,6 +6,15 @@
 .full-details-container{
     padding: 40px 50px;
 }
+.table-containerfirst {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+.tablweidth{
+    width: 60%;
+}
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -30,12 +39,19 @@ th {
 .profile-image {
     width: 100%;
     /* max-width: 150px; */
-    height: 350px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 @media (max-width: 768px) {
+    .table-containerfirst {
+        overflow-x: auto;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
     .full-details-container{
         padding: 10px;
     }

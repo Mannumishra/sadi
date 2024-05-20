@@ -28,8 +28,8 @@ const FullDetails = () => {
     return (
         <div className="full-details-container">
             <h2 className='text-center'>Full Informations</h2>
-            <div className="table-container">
-                <table className='table table-bordered table-striped table-hover'>
+            <div className="table-containerfirst">
+                <table className='table table-bordered table-striped table-hover tablweidth'>
                     <tbody>
                         <tr>
                             <th colSpan={3} style={{ color: "orange" }}>PERSONAL INFORMATION</th>
@@ -37,11 +37,7 @@ const FullDetails = () => {
                         <tr>
                             <th>Name</th>
                             <td>{data.name}</td>
-                            <td rowSpan={9}>
-                                <a href={data.image} target="_blank" rel="noopener noreferrer">
-                                    <img src={data.image} alt={data.name} className="profile-image" />
-                                </a>
-                            </td>
+
                         </tr>
                         <tr>
                             <th>Father Name</th>
@@ -75,24 +71,28 @@ const FullDetails = () => {
                             <th>Siblings</th>
                             <td>{data.siblings}</td>
                         </tr>
-                        <tr>
-                            <th colSpan={3} style={{ color: "orange" }}>CONTACT DETAILS</th>
-                        </tr>
-                        <tr>
-                            <th>Email</th>
-                            <td>{data.email}</td>
-                        </tr>
-                        <tr>
-                            <th>Phone</th>
-                            <td>{data.phone}</td>
-                        </tr>
+
                     </tbody>
                 </table>
+                <div style={{width:"40%"}}>
+                    <a href={data.image} target="_blank" rel="noopener noreferrer">
+                        <img src={data.image} alt={data.name} className="profile-image" />
+                    </a>
+                </div>
             </div>
 
             <div className="table-container">
-                <table className='table table-bordered table-striped table-hover'>
+                <table className='table table-bordered table-striped table-hover  '>
                     <tbody>
+                        <tr>
+                            <th colSpan={6} style={{ color: "orange" }}>CONTACT DETAILS</th>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td colSpan={2}>{data.email}</td>
+                            <th>Phone</th>
+                            <td colSpan={2}>{data.phone}</td>
+                        </tr>
                         <tr>
                             <th colSpan={6} style={{ color: "orange" }}>Religious & Social Background</th>
                         </tr>
@@ -121,6 +121,10 @@ const FullDetails = () => {
                         <tr>
                             <th>Highest Education</th>
                             <td>{data.education}</td>
+                            <th>Company Name</th>
+                            <td>{data.companyname}</td>
+                            <th>Anuval Salary</th>
+                            <td>{data.salary}</td>
                         </tr>
                         <tr>
                             <th colSpan={6} style={{ color: "orange" }}>Location / Residence</th>

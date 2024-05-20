@@ -1,0 +1,83 @@
+.servicemain{
+    background-color: #F0F2F7;
+    padding: 40px;
+}
+.ourservice p {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(137, 44, 27);
+    text-align: center;
+}
+.servicecard{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+   
+}
+/* .servicecardfrist div{
+    display: flex;
+    gap: 10px;
+} */
+.servicecardfrist {
+    width: 31%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.servicecardfrist .img{
+    width: 100%;
+    height: 200px;
+}
+.servicecardfrist .img img{
+    width: 100%;
+    height: 100%;
+}
+.servicecardfrist p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color:  black;
+    opacity: 0.8;
+    /* margin-top: 20px; */
+    float: left;
+    margin: 0 !important;
+}
+
+.servicecardfrist  button{
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    border: 0px;
+    border-radius: 5px;
+    background-color:  rgb(137, 44, 27);;
+    color: #f1f1f1;
+    padding: 10px;
+}
+.servicecardfrist div img {
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width:768px){
+    .servicecard{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .servicecardfrist {
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .servicemain{
+        background-color: #F0F2F7;
+        padding: 40px 10px;
+    }
+}

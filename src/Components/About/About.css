@@ -1,0 +1,36 @@
+.about{
+    display: flex;
+    gap: 30px;
+    padding: 40px 50px;
+    /* margin-top: 30px; */
+    background-image: url(../Images/bg.jpg);
+}
+.about div{
+    width: 49%;
+}
+.about div h5{
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+.about div img{
+        height: auto;
+        width: 100%;
+}
+
+@media (max-width:768px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+        /* margin-top: 30px; */
+        background-image: url(../Images/bg.jpg);
+    }
+    .about div{
+        width: 100%;
+    }
+    .about div p{
+    text-align: justify;
+    }
+}

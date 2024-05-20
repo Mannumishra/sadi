@@ -1,0 +1,27 @@
+.singnup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px;/ */
+}
+.signupform{
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 40px;
+}
+.signupheading{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+}
+.signupform button{
+    background-color: rgb(137, 44, 27);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    border: 0px ;
+    border-radius: 5px;
+}

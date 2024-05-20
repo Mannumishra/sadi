@@ -1,0 +1,21 @@
+.selfprofile{
+    display: flex;
+    padding: 30px 50px;
+}
+.selfprofilefirst{
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selprofilesecond{
+    width: 49%;
+}
+.profilebutton{
+    text-decoration: none;
+    color: white;
+    background-color: #892C1B;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}

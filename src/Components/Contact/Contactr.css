@@ -1,0 +1,30 @@
+.contactmain{
+    display: flex;
+    margin-top: 50px;
+    padding: 0px 20px;
+    gap: 20px;
+}
+.contactusheading{
+    font-size: 23px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px ;
+
+}
+.contactdivfirst{
+    width: 49%;
+}
+.contactdivsecond{
+    width: 49%;
+}
+.contactdivsecond button{
+    background-color: #892C1B;
+    padding: 5px;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    border: 0px;
+    border-radius: 5px;
+}

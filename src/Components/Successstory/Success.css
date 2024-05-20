@@ -1,0 +1,52 @@
+.successmain {
+    padding: 40px;
+}
+.successcard{
+    display: flex;
+    gap: 30px;
+}
+.successheading p{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(137, 44, 27);;
+    text-align: center;
+}
+.successcardfirst {
+    width: 31%;
+    background-color: rgba(0, 0, 0, 0.881);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.successcardfirst img {
+    width: 100%;
+}
+
+.successcardfirst p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.successcardfirst:hover {
+    background-color: #F53E7D;
+}
+
+@media (max-width:768px){
+    .successcard{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .successcardfirst {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.881);
+        padding: 20px;
+        cursor: pointer;
+    }
+    .successmain {
+        padding: 40px 10px;
+    }
+}

@@ -19,18 +19,18 @@
     width: 24%;
 }
 .footerseconddiv p{
-    color: white;
+    color: orange;
     margin-left: 40px;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .footerthirddiv {
     width: 24%;
 }
 .footerthirddiv p{
-    color: white;
-    margin-left: 40px;
+    color: orange;
+    margin-left: 20px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -51,13 +51,13 @@
     width: 20%;
 }
 .footerfourdiv p{
-    color: white;
+    color: orange;
     margin-left: 40px;
     font-size: 18px;
     font-weight: 600;
 }
 .footerfourdiv div i{
-   color: white;
+   color: orange;
    gap: 30px;
    font-size: 40px;
    margin-left: 10px;
@@ -66,7 +66,7 @@
 .quicklinksdiv{
 display: flex;
 /* flex-direction: column; */
-gap: 10px;
+gap: 5px;
 }
 
 @media (max-width:768px){

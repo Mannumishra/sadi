@@ -30,11 +30,13 @@
 }
 .servicecardfrist .img{
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 .servicecardfrist .img img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 .servicecardfrist p{
     text-align: center;

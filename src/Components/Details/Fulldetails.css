@@ -36,6 +36,9 @@ th {
 }
 
 @media (max-width: 768px) {
+    .full-details-container{
+        padding: 10px;
+    }
     .table-container {
         overflow-x: scroll;
     }

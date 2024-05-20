@@ -74,7 +74,7 @@ const FullDetails = () => {
 
                     </tbody>
                 </table>
-                <div style={{width:"40%"}}>
+                <div className='imagediv'>
                     <a href={data.image} target="_blank" rel="noopener noreferrer">
                         <img src={data.image} alt={data.name} className="profile-image" />
                     </a>

@@ -13,7 +13,7 @@ const SelfProfile = () => {
 
   const getApiData = async () => {
     try {
-      let res = await axios.get("http://localhost:8000/api/user/" + sessionStorage.getItem("_id"))
+      let res = await axios.get("https://sadibackend.onrender.com/api/user/" + sessionStorage.getItem("_id"))
       setData(res.data.data)
     } catch (error) {
       console.log(error)

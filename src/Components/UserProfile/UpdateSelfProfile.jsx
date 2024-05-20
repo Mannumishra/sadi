@@ -36,7 +36,7 @@ const UpdateSelfProfile = () => {
 
   const getApiData = async () => {
     try {
-      let res = await axios.get("http://localhost:8000/api/user/" + _id)
+      let res = await axios.get("https://sadibackend.onrender.com/api/user/" + _id)
       setData(res.data.data)
     } catch (error) {
       console.log(error)
@@ -84,7 +84,7 @@ const UpdateSelfProfile = () => {
   const postData = async (e) => {
     e.preventDefault()
     try {
-      let res = await axios.put("http://localhost:8000/api/user/" + _id, formData)
+      let res = await axios.put("https://sadibackend.onrender.com/api/user/" + _id, formData)
       console.log(res)
       if (res.status === 200) {
         toast.success("Profile Update successfully")

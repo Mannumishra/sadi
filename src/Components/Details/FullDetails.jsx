@@ -9,7 +9,7 @@ const FullDetails = () => {
 
     const getApiData = async () => {
         try {
-            let res = await axios.get("http://localhost:8000/api/user/" + _id);
+            let res = await axios.get("https://sadibackend.onrender.com/api/user/" + _id);
             console.log(res);
             setData(res.data.data);
         } catch (error) {

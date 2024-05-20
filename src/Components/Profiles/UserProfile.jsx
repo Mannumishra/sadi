@@ -7,7 +7,7 @@ const UserProfile = () => {
     // alert(gender)
     const getApiData = async () => {
         try {
-            let res = await axios.get("http://localhost:8000/api/user")
+            let res = await axios.get("https://sadibackend.onrender.com/api/user")
             setData(res.data.data)
         } catch (error) {
             console.log(error)

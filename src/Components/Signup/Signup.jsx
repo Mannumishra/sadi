@@ -73,7 +73,7 @@ const Signup = () => {
   const postData = async (e) => {
     e.preventDefault()
     try {
-      let res = await axios.post("http://localhost:8000/api/user", formData)
+      let res = await axios.post("https://sadibackend.onrender.com/api/user", formData)
       console.log(res)
       if (res.status === 200) {
         toast.success("Signup Success Fully")

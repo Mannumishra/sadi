@@ -16,7 +16,7 @@ const Login = () => {
     const postData = async (e) => {
         e.preventDefault()
         try {
-            let res = await axios.post("http://localhost:8000/api/user/login", data)
+            let res = await axios.post("https://sadibackend.onrender.com/api/user/login", data)
             console.log(res)
             if (res.status === 200) {
                 sessionStorage.setItem("login", true)

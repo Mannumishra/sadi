@@ -76,9 +76,11 @@
 
 .mobile-menu-icon {
     display: none;
-    font-size: 30px;
-    color: black;
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
     cursor: pointer;
+    background-color: #892C1B;
 }
 
 @media (max-width: 768px) {

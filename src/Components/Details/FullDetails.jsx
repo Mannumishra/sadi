@@ -7,6 +7,10 @@ const FullDetails = () => {
     const { _id } = useParams();
     const [data, setData] = useState({});
 
+    // const login = sessionStorage.getItem("login")
+    const gender = sessionStorage.getItem("gender")
+    console.log(gender)
+
     const getApiData = async () => {
         try {
             let res = await axios.get("https://sadibackend.onrender.com/api/user/" + _id);
@@ -89,9 +93,13 @@ const FullDetails = () => {
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td colSpan={2}>{data.email}</td>
+                            {
+                                gender === "Male" ? "******************" : <td colSpan={2}>{data.email}</td>
+                            }
                             <th>Phone</th>
-                            <td colSpan={2}>{data.phone}</td>
+                            {
+                                gender === "Male" ? "******************" : <td colSpan={2}>{data.phone}</td>
+                            }
                         </tr>
                         <tr>
                             <th colSpan={6} style={{ color: "orange" }}>Religious & Social Background</th>

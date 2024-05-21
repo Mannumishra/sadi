@@ -25,3 +25,10 @@
     border: 0px ;
     border-radius: 5px;
 }
+@media(max-width:768px){
+    .signupform {
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 10px;
+    }
+}

@@ -18,7 +18,7 @@ const Contact = () => {
   const postData = async (e) => {
     e.preventDefault()
     try {
-        let res = await axios.post("https://sadibackend.onrender.com/api/contact")
+        let res = await axios.post("https://sadibackend.onrender.com/api/contact" ,data)
         console.log(res)
     } catch (error) {
       console.log(error)

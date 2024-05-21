@@ -5,7 +5,7 @@ import './Fulldetails.css';
 
 const FullDetails = () => {
     const { _id } = useParams();
-    const [data, setData] = useState({});
+    const [data, setData] = useState({})
 
     // const login = sessionStorage.getItem("login")
     const gender = sessionStorage.getItem("gender")
@@ -13,7 +13,7 @@ const FullDetails = () => {
 
     const getApiData = async () => {
         try {
-            let res = await axios.get("https://sadibackend.onrender.com/api/user/" + _id);
+            let res = await axios.get("https://sadibackend.onrender.com/api/user/" + _id)
             console.log(res);
             setData(res.data.data);
         } catch (error) {
@@ -41,7 +41,6 @@ const FullDetails = () => {
                         <tr>
                             <th>Name</th>
                             <td>{data.name}</td>
-
                         </tr>
                         <tr>
                             <th>Father Name</th>

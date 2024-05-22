@@ -1,0 +1,68 @@
+.socialsec{
+    background-image: url(../Images/bg.jpg);
+}
+.social{
+    display: flex;
+    gap: 30px;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+.social div{
+    width: 50%;
+}
+.social div p{
+   font-size: 18px;
+   font-weight: 600;
+   opacity: 0.9;
+
+}
+.social div img{
+    height: 400px;
+    margin-top: 30px;
+}
+.onlysocialtext{
+    padding: 0px 50px;
+}
+.onlysocialtext p{
+   font-size: 16px;
+   font-weight: 600;
+   text-transform: capitalize;
+   opacity: 0.9;
+   text-align: justify;
+
+}
+@media(max-width:768px){
+    .social div{
+        width: 100%;
+    }
+    .social{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding:10px 20px;
+        justify-content: space-between;
+    }
+    .social div img{
+        height: auto;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .onlysocialtext {
+        padding: 10px 20px;
+    }
+    .social div p{
+        font-size: 15px;
+        font-weight: 600;
+        opacity: 0.9;
+        text-align: justify;
+     
+     }
+     .onlysocialtext p{
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: capitalize;
+        opacity: 0.9;
+        text-align: justify;
+     
+     }
+}

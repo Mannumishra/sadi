@@ -1,0 +1,62 @@
+.howwework {
+    background-image: url(../Images/bg.jpg);
+}
+
+.howwe {
+    display: flex;
+    gap: 30px;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+
+.howdivfirst {
+    width: 60%;
+}
+
+.howdivfirst {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.howdivsecond {
+    width: 40%;
+}
+
+.howdivsecond img {
+    width: 100%;
+    height: auto;
+}
+
+@media(max-width:768px) {
+    .howdivfirst {
+        width: 100%;
+    }
+
+    .howdivsecond {
+        width: 100%;
+    }
+
+    .howwe {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    .howdivfirst {
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    .onlysocialtext p {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: capitalize;
+        opacity: 0.9;
+        text-align: justify;
+
+    }
+}

@@ -22,8 +22,9 @@ const Header = () => {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/service'>Find Your Match</Link></li>
-            {/* {login && <li><Link to='/profiles'>Users</Link></li>} */}
-            <li><Link to='/success'>Success Story</Link></li>
+            {/* <li><Link to='/service'>FindYourMatch</Link></li> */}
+            <li><Link to='/social'>Our Social Work</Link></li>
+            <li><Link to='/howwork'>How We Work</Link></li>
             <li><Link to='/contact'>Contact Us</Link></li>
           </ul>
         </div>
@@ -35,7 +36,7 @@ const Header = () => {
       {/* Mobile Navbar */}
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
         <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 20px" }}>
-          <p>Sita Ram Marriage </p>
+          <p>SitaRamMarriageBureau </p>
           <i className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}></i>
         </div>
       </div>
@@ -44,8 +45,9 @@ const Header = () => {
           <ul>
             <li><Link to='/' onClick={toggleMobileMenu}>Home</Link></li>
             <li><Link to='/about' onClick={toggleMobileMenu}>About</Link></li>
-            <li><Link to='/service' onClick={toggleMobileMenu}>Service</Link></li>
-            {login && <li><Link to='/profiles' onClick={toggleMobileMenu}>Users</Link></li>}
+            <li><Link to='/service' onClick={toggleMobileMenu}>Find Your Match</Link></li>
+            <li><Link to='/social' onClick={toggleMobileMenu}>Our Social Work</Link></li>
+            <li><Link to='/howwork' onClick={toggleMobileMenu}>How We Work</Link></li>
             <li><Link to='/success' onClick={toggleMobileMenu}>Success Story</Link></li>
             <li><Link to='/contact' onClick={toggleMobileMenu}>Contact</Link></li>
             <li>

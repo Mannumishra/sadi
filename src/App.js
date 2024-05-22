@@ -15,6 +15,8 @@ import UserProfile from './Components/Profiles/UserProfile';
 import SelfProfile from './Components/UserProfile/SelfProfile';
 import UpdateSelfProfile from './Components/UserProfile/UpdateSelfProfile';
 import FullDetails from './Components/Details/FullDetails';
+import SocialWork from './Components/SicialWork/SocialWork';
+import Howwework from './Components/Howwework/Howwework';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path='/profiles' element={<UserProfile />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup  />} />
+          <Route path='/social' element={<SocialWork  />} />
+          <Route path='/howwork' element={<Howwework  />} />
           <Route path='/selfprofile' element={<SelfProfile  />} />
           <Route path='/update-profile/:_id' element={<UpdateSelfProfile  />} />
           <Route path='/details/:_id' element={<FullDetails  />} />

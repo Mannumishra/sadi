@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="footermain">
         <div className="footerfirstdiv">
-          <p>Samuhik Vivah named the most trusted marriage bureau for our exclusive and hand-picked variety of services. Our job doesn’t just finish at matching you with your other half. We are here to be a part of every step of your story! Our services are tailored to each individual’s preference to make them comfortable.</p>
+          <p>Sita Ram Marriage Bureau named the most trusted marriage bureau for our exclusive and hand-picked variety of services. Our job doesn’t just finish at matching you with your other half. We are here to be a part of every step of your story! Our services are tailored to each individual’s preference to make them comfortable.</p>
         </div>
         <div className="footerseconddiv">
           <p>Quick Links</p>

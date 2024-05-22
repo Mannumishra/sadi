@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import banare1 from '../Images/samuhik vivah 2.jpg'
 import banare2 from '../Images/samuhik vivah 3.jpg'
@@ -8,7 +8,9 @@ import banare5 from '../Images/banare2.jpg'
 import About from '../About/About'
 import Service from '../Service/Service'
 import SuccessStory from '../Successstory/SuccessStory'
+import axios from 'axios'
 const Home = () => {
+
   const getInputData = () => {
 
   }

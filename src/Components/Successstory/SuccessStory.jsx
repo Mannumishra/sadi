@@ -1,37 +1,42 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Success.css'
-import cupple1 from '../Images/cupple1.jpg'
-import cupple2 from '../Images/cupple4.jpg'
-import cupple3 from '../Images/cupple3.jpg'
-import cupple4 from '../Images/cupple4.jpg'
+import axios from 'axios'
 const SuccessStory = () => {
-  useEffect(()=>{
+  const [successData, setsuccessData] = useState([])
+
+  const getApiData = async () => {
+    try {
+      let res = await axios.get("https://sadibackend.onrender.com/api/success")
+      setsuccessData(res.data.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    getApiData()
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
     })
-  },[])
+  }, [])
   return (
     <>
-    <div className="successmain">
+      <div className="successmain">
         <div className="successheading">
           <p>SUCCESS STORIES</p>
         </div>
         <div className="successcard">
-            <div className="successcardfirst">
-              <img src={cupple1} alt="" />
-              <p>Amit & Monika</p>
-            </div>
-            <div className="successcardfirst">
-              <img src={cupple2} alt="" />
-              <p>Mnish & Kavita</p>
-            </div>
-            <div className="successcardfirst">
-              <img src={cupple3} alt="" />
-              <p>Suresh & Preetee</p>
-            </div>
+          {
+            successData.map((item, index) =>
+              <div className="successcardfirst">
+                <img src={item.image} alt="" />
+                <p>{item.husbandname} & {item.wifename}</p>
+                <p style={{ fontSize: 15, textAlign: "center", fontWeight: 600 }}>{item.successmess}</p>
+              </div>
+            )
+          }
         </div>
-    </div>
+      </div>
     </>
   )
 }

@@ -15,7 +15,7 @@ const Header = () => {
       {/* Desktop Navbar */}
       <header className="navbarmenu">
         <div className="logo">
-          <p><Link to='/'>Samuhik Vivah</Link></p>
+          <p><Link to='/'>SitaRamMarriageBureau</Link></p>
         </div>
         <div className="links">
           <ul>
@@ -35,7 +35,7 @@ const Header = () => {
       {/* Mobile Navbar */}
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
         <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 20px" }}>
-          <p>Samuhik vivah </p>
+          <p>Sita Ram Marriage </p>
           <i className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}></i>
         </div>
       </div>

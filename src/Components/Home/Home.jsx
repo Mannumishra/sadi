@@ -27,9 +27,9 @@ const Home = () => {
 
       <section>
         <div>
-          <div className="container">
+          <div className="container-fluid">
             <form action="">
-              <div className="row">
+              <div className="row formrow">
                 <p className='signupheadinh'>Fill Details for Create Account </p>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="">Name</label>

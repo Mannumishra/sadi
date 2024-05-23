@@ -32,7 +32,7 @@ const SelfProfile = () => {
       <section>
         <div className="selfprofile">
           <div className="selfprofilefirst">
-            <img src={data.image} alt={data.name} style={{ height: 400 ,width:"100%" ,objectFit:"cover" }} />
+            <img src={data.image} alt={data.name} style={{ height: 400 ,width:"100%" ,objectFit:"fill" }} />
           </div>
           <div className="selprofilesecond">
             <table className="table table-bordered table-striped table-hover">

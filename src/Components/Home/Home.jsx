@@ -6,17 +6,90 @@ import banare3 from '../Images/samuhik vivah.jpg'
 import banare4 from '../Images/banare3.jpg'
 import banare5 from '../Images/banare2.jpg'
 import About from '../About/About'
+import toast from 'react-hot-toast'
 import Service from '../Service/Service'
 import SuccessStory from '../Successstory/SuccessStory'
 import axios from 'axios'
 const Home = () => {
+  const [data, setData] = useState({
+    name: "",
+    fathername: "",
+    mothername: "",
+    age: "",
+    gender: "",
+    dateofbirth: "",
+    birthplace: "",
+    height: "",
+    siblings: "",
+    religion: "",
+    cast: "",
+    subcast: "",
+    gotra: "",
+    mgotra: "",
+    ggotra: "",
+    education: "",
+    companyname: "",
+    salary: "",
+    address: "",
+    pin: "",
+    city: "",
+    state: "",
+    email: "",
+    phone: "",
+    password: "",
+    image: ""
+  })
 
-  const getInputData = () => {
-
+  const getInputData = (e) => {
+    const { name, value } = e.target
+    setData({ ...data, [name]: value })
   }
 
-  const getFileData = () => {
+  const getFileData = (e) => {
+    const { name, files } = e.target
+    setData({ ...data, [name]: files[0] })
+  }
 
+  const formData = new FormData()
+  formData.append("name", data.name)
+  formData.append("fathername", data.fathername)
+  formData.append("mothername", data.mothername)
+  formData.append("gender", data.gender)
+  formData.append("age", data.age)
+  formData.append("dateofbirth", data.dateofbirth)
+  formData.append("birthplace", data.birthplace)
+  formData.append("height", data.height)
+  formData.append("siblings", data.siblings)
+  formData.append("religion", data.religion)
+  formData.append("cast", data.cast)
+  formData.append("subcast", data.subcast)
+  formData.append("gotra", data.gotra)
+  formData.append("mgotra", data.mgotra)
+  formData.append("ggotra", data.ggotra)
+  formData.append("education", data.education)
+  formData.append("companyname", data.companyname)
+  formData.append("salary", data.salary)
+  formData.append("address", data.address)
+  formData.append("pin", data.pin)
+  formData.append("city", data.city)
+  formData.append("state", data.state)
+  formData.append("email", data.email)
+  formData.append("phone", data.phone)
+  formData.append("password", data.password)
+  formData.append("image", data.image)
+
+  const postData = async (e) => {
+    e.preventDefault()
+    try {
+      let res = await axios.post("https://sadibackend.onrender.com/api/user", formData)
+      console.log(res)
+      if (res.status === 200) {
+        toast.success("Signup Success Fully")
+        window.location.href = "/login"
+      }
+    } catch (error) {
+      // console.log(error)
+    }
   }
   useEffect(() => {
     window.scrollTo({
@@ -30,20 +103,20 @@ const Home = () => {
       <section>
         <div>
           <div className="container-fluid">
-            <form action="">
+            <form action="" onSubmit={postData}>
               <div className="row formrow">
                 <p className='signupheadinh'>Fill Details for Create Account </p>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="">Name</label>
-                  <input type="text" name="name" id="" placeholder='Name' className='form-control' />
+                  <input type="text" name="name" id="" placeholder='Name' onChange={getInputData} className='form-control' />
                 </div>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="">Father Name</label>
-                  <input type="text" name="name" id="" placeholder='Name' className='form-control' />
+                  <input type="text" name="fathername" id="" placeholder='Father Name' onChange={getInputData} className='form-control' />
                 </div>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="">Mother Name</label>
-                  <input type="text" name="name" id="" placeholder='Name' className='form-control' />
+                  <input type="text" name="mothername" id="" onChange={getInputData} placeholder='Mother Name' className='form-control' />
                 </div>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="age">Age <span><sup className="text-danger">*</sup></span></label>
@@ -72,6 +145,20 @@ const Home = () => {
                 <div className="col-md-4 mb-2">
                   <label htmlFor="siblings">Siblings <span><sup className="text-danger">*</sup></span></label>
                   <input type="text" name="siblings" className="form-control" onChange={getInputData} placeholder="Siblings" required />
+                </div>
+                <div className="col-md-4 mb-2">
+                  <label htmlFor="religion">Religion <span><sup className="text-danger">*</sup></span></label>
+                  <input type="text" name="religion" className="form-control" onChange={getInputData} placeholder="Religion" required />
+                </div>
+                <div className="col-md-4 mb-2">
+                  <label htmlFor="subcast">Caste <span><sup className="text-danger">*</sup></span></label>
+                  <select name="cast" className="form-control" onChange={getInputData} required>
+                    <option value="Select caste">Select Caste</option>
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                  </select>
                 </div>
                 <div className="col-md-4 mb-2">
                   <label htmlFor="subcast">Sub Caste <span><sup className="text-danger">*</sup></span></label>
@@ -167,7 +254,7 @@ const Home = () => {
                   <label htmlFor="password">Password <span><sup className="text-danger">*</sup></span></label>
                   <input type="password" name="password" className="form-control" onChange={getInputData} placeholder="Password" required />
                 </div>
-                <div className="col-md-4 mb-2">
+                <div className="col-md-8 mb-2">
                   <label htmlFor="image">Image <span><sup className="text-danger">*</sup></span></label>
                   <input type="file" name="image" className="form-control" onChange={getFileData} placeholder="Image" required />
                 </div>
